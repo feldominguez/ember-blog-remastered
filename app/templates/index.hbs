@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="layout-column flex-70 layout-margin flex-xs-95" style="margin:200px 0; max-width:570px; z-index: 1">
+        <div class="layout-column flex-70 layout-margin flex-xs-95" style="margin:200px 0; max-width:620px; z-index: 1">
             <div class="flex-90 card-motions" style="margin: 5px">
 
                 {{outlet}}
@@ -26,7 +26,7 @@
                                     {{#text.subhead}}{{blog.date}}{{/text.subhead}}
                                 {{/header.text}}
                             {{/card.header}}
-                        {{#link-to "blog.post" blog.id }}<div class="md-media-sm card-media" style="max-height:160px;overflow-y:hidden">
+                        {{#link-to "blog.post" blog.id }}<div class="md-media-sm card-media" style="max-height:130px;overflow-y:hidden">
                             {{card.image src=blog.imgUrl}}
                         </div>{{/link-to}}
                             {{#card.content max-length=100 class='cardText'}}
