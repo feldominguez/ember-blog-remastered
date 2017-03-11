@@ -1,0 +1,33 @@
+<div class='layout-row layout-align-center' id="top-banner-blog">
+    <div class='flex-90 ' id="top-banner-blog-ann">
+        {{#each model as |blog|}}
+            <h1 style=''>{{blog.title}}</h1>
+            <span style="">{{blog.date}}</span>
+        {{/each}}
+    </div>
+</div>
+
+<div class="layout-row layout-align-center" style="margin:0px 0 150px 0">
+    <div class="layout-column" style="position: relative; width: 720px">
+
+        <div class="flex blogText" style="display: block;">
+
+
+
+            {{#each model as |blog|}}
+                <div class='flex-100 blogImage' style="background-image:url('{{blog.imgUrl}}')">
+                    {{!<img src={{blog.imgUrl}}
+            </div>
+
+                <p>
+                    {{{blog.text}}}
+                </p>
+
+            {{/each}}
+
+        </div>
+
+    </div>
+
+
+</div>

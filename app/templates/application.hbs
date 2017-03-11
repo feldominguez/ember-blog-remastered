@@ -1,0 +1,92 @@
+
+{{#hiding-menu throttleTime=50 topTolerance=100 bottomTolerance=50 class="my-menu"}}
+
+{{#paper-toolbar class='widthFix'}}
+    {{#paper-toolbar-tools class='heightFix'}}
+       {{#link-to 'index'}}<img id='logo' src="/images/logo.png">{{/link-to}}
+
+
+       <span class="flex"></span>
+       {{!--{{#paper-button raised=true primary=true}}About{{/paper-button}}--}}
+       <div class='layout-column'>
+{{#paper-menu position="target-left bottom" as |menu|}}
+    {{#menu.trigger}}
+      {{#paper-button raised=true primary=true}}
+      {{paper-icon 'menu'}}
+      {{/paper-button}}
+    {{/menu.trigger}}
+    {{#menu.content width=4 as |content|}}
+      {{!--{{#each items as |item|}}--}}
+        {{#content.menu-item onClick="openSomething"}}
+          {{paper-icon "face"}}
+          <span>About</span>
+          {{!--<span>{{item.title}}</span>--}}
+        {{/content.menu-item}}
+      {{!--{{/each}}--}}
+
+      {{#content.menu-item onClick="openSomething"}}
+          {{paper-icon "record-voice-over"}}
+          <span>Blog</span>
+          {{!--<span>{{item.title}}</span>--}}
+        {{/content.menu-item}}
+
+        {{#content.menu-item onClick=(action "hreftransition" "https://goo.gl/O8xXpp")}}
+          {{paper-icon "assignment" }}
+          <span>Resume</span>
+          {{!--<span>{{item.title}}</span>--}}
+        {{/content.menu-item}}
+
+        {{paper-divider}}
+
+ {{#content.menu-item onClick=(action "hreftransition" "https://codepen.io/philgetz/")}}
+         {{paper-icon "exit-to-app" }}
+          <span><i class="fa fa-codepen fa-md"></i> Codepen</span>
+          {{!--<span>{{item.title}}</span>--}}
+        {{/content.menu-item}}
+        
+
+
+
+{{#if checkingAuths}}
+      {{#content.menu-item onClick=(action "logout")}}
+        {{paper-icon "adb"}}
+        <span>Logout</span>
+      {{/content.menu-item}}
+
+
+      
+       {{#content.menu-item onClick=(action "transition" "create-new-blogPost")}}
+        {{paper-icon "adb"}}
+        <span>New Post</span>
+      {{/content.menu-item}}
+      
+      
+
+      {{/if}}
+
+      {{!--{{paper-divider}}--}}
+      {{!--{{#each items as |item|}}
+        {{#content.menu-item onClick="openSomething"}}
+          {{paper-icon item.icon}} {{item.title}}
+        {{/content.menu-item}}
+      {{/each}}--}}
+    {{/menu.content}}
+  {{/paper-menu}}</div>
+
+{{/paper-toolbar-tools}}
+{{/paper-toolbar}}
+
+{{/hiding-menu}}
+
+<div flex layout="row" class='top-pad'>
+    <md-content flex>
+
+        {{outlet}}
+
+    </md-content>
+</div>
+
+
+{{!--{{#hiding-menu class="bottom"}}
+  This menu is fixed on bottom.
+{{/hiding-menu}}--}}

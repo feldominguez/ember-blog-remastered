@@ -1,0 +1,59 @@
+{{!-- <button {{action 'authenticate'}}>letsee</button> --}}
+
+<div class="layout-row layout-align-center-center layout-fill background-login">
+    <div class="layout-column flex-35 layout-margin flex-xs-95  flex-sm-60">
+
+        {{#paper-card as |card|}}
+
+{{#if checkingAuths}}
+
+
+{{#card.title as |title|}}
+                {{#title.text as |text|}}
+                    {{#text.headline}}
+                        You are logged In!
+                    {{/text.headline}}
+                {{/title.text}}
+            {{/card.title}}
+
+{{else}}
+
+            {{#card.title as |title|}}
+                {{#title.text as |text|}}
+                    {{#text.headline}}
+                        Login
+                    {{/text.headline}}
+                {{/title.text}}
+            {{/card.title}}
+
+            {{#card.content}}
+                <form onsubmit={{action 'authenticate'}}>
+                    <div class="layout layout-lg-row">
+
+                        {{paper-input class='md-block flex' placeholder="Username" value=name onChange=(action (mut name))}}
+
+                    </div>
+
+                    <div class="layout layout-lg-row">
+
+                        {{paper-input class='md-block flex' type='password' label="Password" value=password onChange=(action (mut password))}}
+
+                    </div>
+
+
+
+
+                {{#card.actions}}
+
+                    {{#paper-button type='submit'}}login{{/paper-button}}
+                {{/card.actions}}
+                </form>
+
+
+                 {{!--{{#paper-button  onClick=(action 'checkAuth')}}test auth{{/paper-button}}--}}
+            {{/card.content}}
+{{/if}}
+        {{/paper-card}}
+
+    </div>
+</div>

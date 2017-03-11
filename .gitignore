@@ -1,9 +1,18 @@
-/node_modules
-npm-debug.log
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
 /tmp
-/common-tmp
-*.tgz
-/docs/build
-.deps-tmp
-/coverage
-*.pem
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log*
+testem.log

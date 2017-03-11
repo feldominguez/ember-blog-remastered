@@ -1,0 +1,57 @@
+<div class='layout-row flex' id="top-banner">
+    <div class='layout-column flex-90' id="top-banner-ann" style="text-align: center; font-weight:300; font-size: 30pt">
+        A simple Ember.js Blog
+    </div>
+</div>
+
+<div class="layout-row layout-align-center">
+    <div class="layout-row flex-80 flex-xs-100" style="max-width: 1000px">
+
+        <div class="flex-30 layout-column flex-align-end hide-xs">
+            <div class="flex-90 layout-column flex-align-center" style="margin: 18px auto 0 auto">
+            {{#personal-sidebar}}{{/personal-sidebar}}
+            </div>
+        </div>
+
+        <div class="layout-column flex-70 layout-margin flex-xs-95" style="margin:200px 0; max-width:570px; z-index: 1">
+            <div class="flex-90 card-motions" style="margin: 5px">
+
+                {{outlet}}
+                {{#each model as |blog|}}
+                    <div class="flex cardIsThere" style='margin: 15px 0 25px 0'>
+                        {{#paper-card as |card|}}
+                            {{#card.header as |header|}}
+                                {{#header.text as |text|}}
+                                    {{#link-to "blog.post" blog.id }}{{#text.title}}{{blog.title}}{{/text.title}}{{/link-to}}
+                                    {{#text.subhead}}{{blog.date}}{{/text.subhead}}
+                                {{/header.text}}
+                            {{/card.header}}
+                        {{#link-to "blog.post" blog.id }}<div class="md-media-sm card-media" style="max-height:160px;overflow-y:hidden">
+                            {{card.image src=blog.imgUrl}}
+                        </div>{{/link-to}}
+                            {{#card.content max-length=100 class='cardText'}}
+                                <p style="font-family: 'Roboto Slab';font-size: normal; color: #222222; line-height: 25px">
+                                    {{{blog.text}}}
+                                </p>
+                            {{/card.content}}
+
+                            {{#card.actions class='cardActionButtons'}}
+                                    {{#if checkingAuths}}
+                                      {{#paper-button class=blog.id onClick=(action "delete" blog.id)}}Delete{{/paper-button}}
+                                    {{/if}}
+                                    {{#paper-button class=blog.id onClick=(action (transition-to "blog.post" blog.id))}}Read{{/paper-button}}
+                            {{/card.actions}}
+
+
+                        {{/paper-card}}
+                    </div>
+
+                {{/each}}
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

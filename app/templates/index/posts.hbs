@@ -1,0 +1,32 @@
+{{!--{{#each model as |blog|}}
+    <div class="flex cardIsThere" style='margin-bottom: 15px'>
+        {{#paper-card as |card|}}
+            {{#card.header as |header|}}
+                {{#header.text as |text|}}
+                    {{#link-to "blog.post" blog.id }}{{#text.title}}{{blog.title}}{{/text.title}}{{/link-to}}
+                    {{#text.subhead}}{{blog.date}}{{/text.subhead}}
+                {{/header.text}}
+            {{/card.header}}
+        {{#link-to "blog.post" blog.id }}<div class="md-media-sm card-media" style="max-height:160px;overflow-y:hidden">
+            {{card.image src=blog.imgUrl}}
+        </div>{{/link-to}}
+            {{#card.content max-length=100 class='cardText'}}
+                <p style="font-family: 'Roboto Slab';font-size: normal; color: #222222; line-height: 25px">
+                    {{{blog.text}}}
+                </p>
+            {{/card.content}}
+
+            {{#card.actions class='cardActionButtons'}}
+                    {{#if checkingAuths}}
+                        {{#paper-button class=blog.id onClick=(action "delete" blog.id)}}Delete{{/paper-button}}
+                    {{/if}}
+                    {{#paper-button class=blog.id onClick=(action (transition-to "blog.post" blog.id))}}Read{{/paper-button}}
+            {{/card.actions}}
+
+
+        {{/paper-card}}
+    </div>
+
+{{/each}}--}}
+
+<h1>njwkekwjednkje</h1>
