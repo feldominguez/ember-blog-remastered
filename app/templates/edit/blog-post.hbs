@@ -1,0 +1,50 @@
+
+{{#if checkingAuths}}
+<div class="layout-row layout-align-center-center" style="margin: 30px 0">
+    <div class="flex-80">
+
+        {{#paper-card as |card|}}
+
+            {{#card.title as |title|}}
+                {{#title.text as |text|}}
+                    {{#text.headline}}
+                        Edit Post
+                    {{/text.headline}}
+                {{/title.text}}
+            {{/card.title}}
+
+            
+            
+            {{#card.content}}
+            
+                <form onsubmit={{action 'editBlogPost' model}}>
+                <div class="layout layout-lg-row">
+                    {{input class='md-block flex' label="Title" value=model.title}}
+                    {{input class='md-block flex' label="Image Link" value=model.imgUrl}}
+                </div>
+
+                <div class="layout layout-lg-row">
+                    {{textarea class='md-block flex hello' rows=10 maxRows=17 value=model.text}}
+                    {{!--{{paper-input class='md-block flex hello' default='hosdaosidaios' textarea=true block=true label="Content" maxlength=1150 passThru=(hash rows=10 maxRows=17)
+                                  value=post.text onChange=(action (mut content))}}--}}
+                    {{!--{{textarea value=newPost.text placeholder="Content" rows="10" cols="140"}}--}}
+                </div>
+                <div class="layout layout-lg-row">
+                   
+                </div>
+{{post.id}}
+                {{#card.actions}}
+                    {{#paper-button type='submit'}}Publish Edit{{/paper-button}}
+                {{/card.actions}}
+                </form>
+            {{/card.content}}
+        {{/paper-card}}
+
+    </div>
+</div>
+
+{{else}}
+    
+    <div class='flex'><h1>You are not an authorized user </h1></div>
+
+{{/if}}

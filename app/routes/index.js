@@ -5,9 +5,9 @@ export default Ember.Route.extend({
         var promise = Ember.$.ajax({
             type: 'get',
             url: 'https://paper-blog-api.herokuapp.com'
-                //'https://paper-blog-api.herokuapp.com'
+
         }).then(function(data) {
-            var updatedInfo = data.data.map(function(each) {
+            var updatedInfo = data.map(function(each) {
                 var date = each.createdAt.split('').slice(0, 7).join('');
                 var shortext = '';
                 if (each.text.length > 160) {
