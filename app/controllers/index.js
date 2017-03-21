@@ -1,25 +1,25 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  checkingAuths: function() {
+    checkingAuths: function() {
         return localStorage.token ? true : false;
     }.property(),
     actions: {
-      delete: function(post){
-        // post.preventDefault();
+        delete: function(post) {
+            // post.preventDefault();
 
-        var promise = Ember.$.ajax({
-          type: 'DELETE',
-          url: 'https://paper-blog-api.herokuapp.com/blog/' + post,
-          headers: {
-            'x-access-token': localStorage.token
-          }
-        });
+            var promise = Ember.$.ajax({
+                type: 'DELETE',
+                url: 'https://paper-blog-api.herokuapp.com/blog/posts/' + post,
+                headers: {
+                    'x-access-token': localStorage.token
+                }
+            });
 
-        promise.then(()=> {
-          window.location.reload(true);
-        });
+            promise.then(() => {
+                window.location.reload(true);
+            });
 
-      }
+        }
     }
 });

@@ -14,31 +14,30 @@
             {{/card.title}}
 
             
-            {{#each model as |current|}}
+            
             {{#card.content}}
             
-                <form onsubmit={{action 'editBlogPost' current}}>
+                <form onsubmit={{action 'editBlogPost' model}}>
                 <div class="layout layout-lg-row">
-                    {{paper-input class='md-block flex' label="Title" value=current.title onChange=(action (mut title))}}
-                    {{paper-input class='md-block flex' label="Image Link" value=current.imgUrl onChange=(action (mut imgUrl))}}
+                    {{input class='md-block flex' label="Title" value=model.title}}
+                    {{input class='md-block flex' label="Image Link" value=model.imgUrl}}
                 </div>
 
                 <div class="layout layout-lg-row">
-                    {{!--{{textarea class='md-block flex hello' rows=10 maxRows=17 value=current.text}}--}}
+                    {{textarea class='md-block flex hello' rows=10 maxRows=17 value=model.text}}
                     {{!--{{paper-input class='md-block flex hello' default='hosdaosidaios' textarea=true block=true label="Content" maxlength=1150 passThru=(hash rows=10 maxRows=17)
-                                  value=current.text onChange=(action (mut content))}}--}}
+                                  value=post.text onChange=(action (mut content))}}--}}
                     {{!--{{textarea value=newPost.text placeholder="Content" rows="10" cols="140"}}--}}
                 </div>
                 <div class="layout layout-lg-row">
                    
                 </div>
-{{current.id}}
+{{post.id}}
                 {{#card.actions}}
                     {{#paper-button type='submit'}}Publish Edit{{/paper-button}}
                 {{/card.actions}}
                 </form>
             {{/card.content}}
-{{/each}}
         {{/paper-card}}
 
     </div>

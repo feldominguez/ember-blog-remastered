@@ -37,6 +37,7 @@
 
                             {{#card.actions class='cardActionButtons'}}
                                     {{#if checkingAuths}}
+                                     {{#paper-button class=blog.id onClick=(action (transition-to "edit.blog-post" blog.id))}}Edit{{/paper-button}}
                                       {{#paper-button class=blog.id onClick=(action "delete" blog.id)}}Delete{{/paper-button}}
                                     {{/if}}
                                     {{#paper-button class=blog.id onClick=(action (transition-to "blog.post" blog.id))}}Read{{/paper-button}}
