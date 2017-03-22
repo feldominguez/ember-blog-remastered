@@ -23,7 +23,9 @@
                             {{#card.header as |header|}}
                                 {{#header.text as |text|}}
                                     {{#link-to "blog.post" blog.id }}{{#text.title}}{{blog.title}}{{/text.title}}{{/link-to}}
-                                    {{#text.subhead}}{{blog.date}}{{/text.subhead}}
+                    {{#text.subhead}}
+                    {{format-date  blog.createdAt start=4 max-length=11}}
+                    {{/text.subhead}}
                                 {{/header.text}}
                             {{/card.header}}
                         {{#link-to "blog.post" blog.id }}<div class="md-media-sm card-media" style="max-height:130px;overflow-y:hidden">
@@ -31,7 +33,8 @@
                         </div>{{/link-to}}
                             {{#card.content max-length=100 class='cardText'}}
                                 <p style="font-family: 'Roboto Slab';font-size: normal; color: #222222; line-height: 25px">
-                                    {{{blog.text}}}
+                                    {{{truncate-text blog.text start=0 max-length=140}}}
+                                
                                 </p>
                             {{/card.content}}
 
