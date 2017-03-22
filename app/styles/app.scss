@@ -67,6 +67,10 @@
         width: 30px;
     }
     
+    .logo-href {
+        padding: 20px 10px 10px 5px;
+    }
+    
     #top-banner {
         position: absolute;
         width: 100vw;
@@ -154,8 +158,8 @@
         position: static
     }
     
-    .layout-row.flex-80.flex-xs-100.background-grey {
-        background-color: rgba(239, 239, 239, 0.6);
+    .layout-row.layout-align-center.set-background.black {
+        background-color: rgba(239, 239, 239, 0.7);
     }
     
     #contact_section {
