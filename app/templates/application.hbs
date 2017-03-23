@@ -3,12 +3,16 @@
 
 {{#paper-toolbar class='widthFix'}}
     {{#paper-toolbar-tools class='heightFix'}}
-       {{#link-to 'index'}}<img id='logo' src="/images/logo.png">{{/link-to}}
+       {{#link-to 'index' class='logo-href'}}<img id='logo' src="/images/logo.png">{{/link-to}}
 
 
        <span class="flex"></span>
-       {{!--{{#paper-button raised=true primary=true}}About{{/paper-button}}--}}
+        <div class='layout-column hide-md'>
+
+       {{!--{{#paper-button raised=false primary=true}}About{{/paper-button}}--}}
+        </div>
        <div class='layout-column'>
+
 {{#paper-menu position="target-left bottom" as |menu|}}
     {{#menu.trigger}}
       {{#paper-button raised=true primary=true}}

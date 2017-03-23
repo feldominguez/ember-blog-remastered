@@ -67,6 +67,10 @@
         width: 30px;
     }
     
+    .logo-href {
+        padding: 20px 10px 10px 5px;
+    }
+    
     #top-banner {
         position: absolute;
         width: 100vw;
@@ -123,6 +127,11 @@
         background-repeat: no-repeat;
     }
     
+    .blog.post h3 {
+        font-family: Roboto;
+        color: #484848;
+    }
+    
     .blogText {
         width: 100%;
         margin: 0 auto;
@@ -154,8 +163,9 @@
         position: static
     }
     
-    .layout-row.flex-80.flex-xs-100.background-grey {
-        background-color: rgba(239, 239, 239, 0.6);
+    .layout-row.layout-align-center.set-background.black,
+    body {
+        background-color: rgba(250, 250, 250, 0.7);
     }
     
     #contact_section {

@@ -2,7 +2,7 @@
 <div class='layout-row layout-align-center' id="top-banner-blog">
     <div class='flex-90 ' id="top-banner-blog-ann">
             <h1 style=''>{{model.title}}</h1>
-            <span style="">{{model.date}}</span>
+            <span style="">{{format-date  model.createdAt start=4 max-length=11}}</span>
        
     </div>
 </div>
