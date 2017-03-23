@@ -1,5 +1,9 @@
 # Simple-blog
 
+A simple API based ember blog. 
+
+To see the specifics of the blog checkout: phil.surge.sh/blog/post/73
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
