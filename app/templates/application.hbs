@@ -7,8 +7,12 @@
 
 
        <span class="flex"></span>
-       {{!--{{#paper-button raised=true primary=true}}About{{/paper-button}}--}}
-       <div class='layout-column'>
+        <div class='layout-column hide-md'>
+
+       {{!--{{#paper-button raised=false primary=true}}About{{/paper-button}}--}}
+        </div>
+       <div class='layout-column hide-lg'>
+
 {{#paper-menu position="target-left bottom" as |menu|}}
     {{#menu.trigger}}
       {{#paper-button raised=true primary=true}}
