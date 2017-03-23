@@ -158,8 +158,9 @@
         position: static
     }
     
-    .layout-row.layout-align-center.set-background.black {
-        background-color: rgba(239, 239, 239, 0.7);
+    .layout-row.layout-align-center.set-background.black,
+    body {
+        background-color: rgba(250, 250, 250, 0.7);
     }
     
     #contact_section {
