@@ -1,8 +1,8 @@
 # Simple-blog
 
-A simple API based ember blog. See the [live version here](https://phil.surge/) 
+A simple API based ember blog. See the [live version here.](https://phil.surge.com) 
 
-To see the specifics of the blog checkout [my blog post](https://phil.surge.sh/blog/post/73)
+To see the specifics of the blog checkout [my blog post.](https://phil.surge.sh/blog/post/73)
 
 ## Prerequisites
 
