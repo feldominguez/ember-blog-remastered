@@ -7,9 +7,7 @@ export default Ember.Controller.extend({
     actions: {
         delete: function(post) {
 
-            post.destroyRecord().then(() => {
-                window.location.reload(true);
-            });
+            post.destroyRecord()
 
         }
     }
