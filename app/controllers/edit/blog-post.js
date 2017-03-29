@@ -6,8 +6,10 @@ export default Ember.Controller.extend({
     }.property(),
     actions: {
         editBlogPost: function(model) {
-            event.preventDefault();
-            model.save();
+
+            model.save().then(() => {
+                this.transitionToRoute('index')
+            });
         }
     }
 });

@@ -6,17 +6,8 @@ export default Ember.Controller.extend({
     }.property(),
     actions: {
         delete: function(post) {
-            // post.preventDefault();
 
-            var promise = Ember.$.ajax({
-                type: 'DELETE',
-                url: 'https://paper-blog-api.herokuapp.com/blog/posts/' + post,
-                headers: {
-                    'x-access-token': localStorage.token
-                }
-            });
-
-            promise.then(() => {
+            post.destroyRecord().then(() => {
                 window.location.reload(true);
             });
 

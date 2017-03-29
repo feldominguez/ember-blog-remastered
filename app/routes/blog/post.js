@@ -9,28 +9,5 @@ export default Ember.Route.extend({
 
         return promise
 
-        // var postID = params.id;
-
-        // var url = 'https://paper-blog-api.herokuapp.com/blog/posts/' + postID;
-
-        // var promise = Ember.$.ajax({
-        //     type: 'get',
-        //     url: url
-        // }).then(function(data) {
-        //     var updatedInfo = data.map(function(each) {
-        //         var date = each.createdAt.split('').slice(0, 7).join('');
-
-        //         return {
-        //             id: each.id,
-        //             title: each.title,
-        //             text: each.text,
-        //             imgUrl: each.imgUrl,
-        //             date: date
-        //         };
-        //     });
-        //     return updatedInfo;
-        // });
-        // // console.log(promise);
-        // return promise;
     }
 });

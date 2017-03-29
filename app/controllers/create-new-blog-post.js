@@ -7,24 +7,14 @@ export default Ember.Controller.extend({
     actions: {
         createBlogPost: function(e) {
             e.preventDefault();
-            var title = this.get('title');
-            var text = this.get('content');
-            var imgUrl = this.get('imgUrl');
 
-            var promise = Ember.$.ajax({
-                type: 'post',
-                url: 'https://paper-blog-api.herokuapp.com/blog/posts',
-                headers: {
-                    'x-access-token': localStorage.token
-                },
-                data: {
-                    title: title,
-                    text: text,
-                    imgUrl: imgUrl
-                }
-            });
+            let newPost = this.store.createRecord('post', {
+                title: this.get('title'),
+                text: this.get('content'),
+                imgUrl: this.get('imgUrl')
+            })
 
-            promise.then(() => {
+            newPost.save().then(() => {
                 this.transitionToRoute('index');
             }, function() {
                 alert('error');
@@ -32,7 +22,6 @@ export default Ember.Controller.extend({
 
             });
 
-            return promise
 
         }
     }
