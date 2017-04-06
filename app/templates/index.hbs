@@ -1,4 +1,4 @@
-<div class='layout-row flex' id="top-banner">
+{{!--<div class='layout-row flex' id="top-banner">
     <div class='layout-column flex-90' id="top-banner-ann" style="text-align: center; font-weight:300; font-size: 30pt">
         A simple Ember.js Blog
     </div>
@@ -58,4 +58,10 @@
 
 
     </div>
+</div>--}}
+
+<div class='index-wrapper'>
+{{#each model as |section|}}
+   {{index-cards}}
+{{/each}}
 </div>
