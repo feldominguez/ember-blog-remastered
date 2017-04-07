@@ -18,11 +18,11 @@ npm-debug.log*
 testem.log
 
 *.DS_Store
-
+app/.DS_Store
 *.bpkg
 *.gem
 *.rbc
-.DS_Store
+*.DS_Store
 .bpm
 .bundle
 .config

@@ -9,8 +9,10 @@ const Router = Ember.Router.extend({
 Router.map(function() {
     this.route('create-new-blogPost', { path: '/new-post' });
 
+
     this.route('blog', function() {
         this.route('post', { path: "/post/:id" });
+        this.route('home', { path: "" });
     });
     this.route('login');
     this.route('loading');
