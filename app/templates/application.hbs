@@ -28,7 +28,7 @@
         {{/content.menu-item}}
       {{!--{{/each}}--}}
 
-      {{#content.menu-item onClick="openSomething"}}
+      {{#content.menu-item onClick=(action "transition" "blog")}}
           {{paper-icon "record-voice-over"}}
           <span>Blog</span>
           {{!--<span>{{item.title}}</span>--}}
