@@ -9,21 +9,21 @@
 </div>
 
 <div class='index-card-wrapper'>
-
-    <div class='index-card-section'>
-        {{#each model as |section|}}
-        <div class='card__area'>
-            <h3 class='card__announce'>Latest Blog</h3>
+{{!--<div class='offset-card-background'></div>--}}
+    <div class='index-card-section layout-row layout-align-center-center'>
+        {{#each model as |card|}}
+        <div class='card__area layout-column '>
+            <h3 class='card__announce'>{{card.sectionTitle}}</h3>
 
             <div class='card__body'>
-                <h4>{{section.title}}</h4>
-                <ul class='card__content__container'>
-                    <p class='card__content up'>{{section.text}}</p>
+                <h4>{{card.contentTitle}}</h4>
+                <div class='card__content__container'>
+                    <p class='card__content up'>{{card.contentText}}</p>
                     {{!--<div class='card__content down'> </div>       --}}
-                </ul>
+                </div>
             </div>
 
-            <button class='card__follow'>{{section.follow}}</button>
+            <button class='card__follow'>{{card.link}}</button>
         </div>
             {{/each}}
         </div> 
