@@ -546,6 +546,9 @@
         .index-banner__section.left {
             display: none
         }
+        .social-component__list {
+            width: initial;
+        }
     }
     
     @media all and(max-width: 400px) {
