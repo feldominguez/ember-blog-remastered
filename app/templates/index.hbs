@@ -11,18 +11,22 @@
 <div class='index-card-wrapper'>
 
     <div class='index-card-section'>
-            <h3 class='card__announce'></h3>
+        {{#each model as |section|}}
+        <div class='card__area'>
+            <h3 class='card__announce'>Latest Blog</h3>
 
             <div class='card__body'>
+                <h4>{{section.title}}</h4>
                 <ul class='card__content__container'>
-                    <div class='card__content up'></div>
-                    <div class='card__content down'> </div>       
+                    <p class='card__content up'>{{section.text}}</p>
+                    {{!--<div class='card__content down'> </div>       --}}
                 </ul>
             </div>
 
-            <button class='card__follow'></button>
+            <button class='card__follow'>{{section.follow}}</button>
+        </div>
+            {{/each}}
         </div> 
 
     </div>
 
-</div>
