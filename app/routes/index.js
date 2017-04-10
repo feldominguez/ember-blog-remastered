@@ -3,23 +3,25 @@ import Ember from 'ember';
 export default Ember.Route.extend({
     model: function() {
         var introCardsContent = [{
-            sectionTitle: 'Latest Work',
+            sectionTitle: 'Recent Creation',
             contentTitle: 'Simple Blog',
-            contentText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen ',
+            contentText: 'An API based blog with CRUD operations and JWT authentication based on Ember.',
             link: 'See Portfolio',
-            other: ''
+            other: '',
+            theme: 'yellow'
         }, {
-            sectionTitle: 'Latest Blog Post',
-            contentTitle: 'Learn to use helpers in Ember',
+            sectionTitle: 'Latest Blog',
+            contentTitle: 'Learn a Framework By Writting A Blog',
             contentText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen',
             link: 'Go to Blog',
-            other: ''
+            theme: 'green'
         }, {
             sectionTitle: 'About Me',
-            contentTitle: 'Front End Everything',
+            contentTitle: 'Hi I\'m Phil,',
             contentText: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen ',
-            link: 'Get to Know Me',
-            other: ''
+            link: 'Know Some More',
+            other: '',
+            theme: 'blue'
         }];
 
         return introCardsContent

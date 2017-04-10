@@ -442,8 +442,9 @@
     }
     
     //  New Index Section
-    .index-wrapper {
-        padding: 70px;
+    .index__wrapper {
+        padding: 100px;
+        padding-bottom: 60px;
     }
     
     .index-banner {
@@ -530,7 +531,7 @@
     }
     
     @media all and(max-width: 600px) {
-        .index-wrapper {
+        .index__wrapper {
             padding: 70px 0;
         }
         .index-banner {
@@ -560,13 +561,14 @@
         // background-color: black;
         // background-position: 100px;
         position: relative;
-        background-color: #f4f4ef;
-        margin-top: 70px;
+        background-color: white;
+        margin-top: 30px;
         padding-top: 20px;
     }
     
     .offset-card-background {
-        background-color: #fbfbfb;
+        //background-color: #fbfbfb;
+        background-color: #F0F0F0;
         position: absolute;
         height: 65%;
         width: 100%;
@@ -583,39 +585,105 @@
     }
     
     .card__area {
-        padding: 20px;
+        padding: 30px;
         button {
             background-color: inherit;
             border: none;
             text-align: right;
             text-decoration: none;
             display: block;
-            color: #313131;
-            font-family: Poppins;
-            font-weight: 600;
-            font-size: 15pt;
+            color: #333333;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 12pt;
         }
         h3 {
-            color: #2e3d49;
-            font-weight: 300;
-            font-size: 20pt;
+            color: #3e3e3e;
+            font-weight: 400;
+            font-size: 17pt;
+            &:before {
+                // content: '';
+                // border-left: 10px solid red;
+            }
         }
     }
     
     .card__body {
         // border: 1px solid black;
-        box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+        box-shadow: 0px 11px 20px 4px rgba(46, 61, 73, 0.15);
         background: white;
-        padding: 10px 10px 25px 10px;
+        padding: 2.25rem;
+        padding-top: 2rem;
         transition: all .3s ease;
         margin-bottom: 20px;
-        min-height: 400px;
-        border-radius: .375rem;
+        min-height: 300px;
+        // border-radius: .375rem;
         &:hover {
-            box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2);
+            box-shadow: 0px 3px 8px 0px rgba(46, 61, 73, 0.2);
         }
         p {
             margin: 0;
             padding: 0;
         }
+        h4 {
+            position: relative;
+            padding-top: 8px;
+            font-size: 14pt;
+            font-weight: 400;
+            margin-top: 0;
+            &:before {
+                content: "";
+                left: -2.225rem;
+                top: .05rem;
+                width: 0.25rem;
+                height: 2.25rem;
+                position: absolute;
+                background: #02b3e4;
+            }
+        }
+    }
+    
+    .red {
+        $red: red !important;
+        h4 {
+            &:before {
+                background: red !important;
+            }
+        }
+    }
+    
+    .yellow {
+        $yellow: #dac404 !important;
+        h4 {
+            &:before {
+                background: $yellow;
+            }
+        }
+        div>button {
+            color: $yellow
+        }
+    }
+    
+    .green {
+        h4 {
+            $green: #5cad5c !important;
+            &:before {
+                background: $green;
+            }
+        }
+    }
+    
+    .blue {
+        $blue: #40b4f1 !important;
+        h4 {
+            &:before {
+                background: $blue;
+            }
+        }
+    }
+    
+    //blank bottom
+    .blank-bottom {
+        height: 60px;
+        background-color: white;
     }

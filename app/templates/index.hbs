@@ -9,13 +9,13 @@
 </div>
 
 <div class='index-card-wrapper'>
-{{!--<div class='offset-card-background'></div>--}}
+<div class='offset-card-background'></div>
     <div class='index-card-section layout-row layout-align-center-center'>
         {{#each model as |card|}}
-        <div class='card__area layout-column '>
+        <div class='card__area layout-column flex'>
             <h3 class='card__announce'>{{card.sectionTitle}}</h3>
 
-            <div class='card__body'>
+            <div class='card__body {{card.theme}}'>
                 <h4>{{card.contentTitle}}</h4>
                 <div class='card__content__container'>
                     <p class='card__content up'>{{card.contentText}}</p>
@@ -23,10 +23,14 @@
                 </div>
             </div>
 
-            <button class='card__follow'>{{card.link}}</button>
+
+            {{#link-to 'blog' tagName='button' class=card.theme}} {{card.link}} {{/link-to}}
+            {{!--<button class='card__follow'>{{card.link}}</button>--}}
         </div>
             {{/each}}
         </div> 
 
     </div>
+
+    <div class='blank-bottom'></div>
 
