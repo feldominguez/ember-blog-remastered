@@ -13,7 +13,7 @@
     <div class='index-card-section layout-row layout-align-center-center'>
         {{#each model as |card|}}
         <div class='card__area layout-column flex'>
-            <h3 class='card__announce'>{{card.sectionTitle}}</h3>
+            <h3 class='card__announce {{card.theme}}'>{{card.sectionTitle}}</h3>
 
             <div class='card__body {{card.theme}}'>
                 <h4>{{card.contentTitle}}</h4>

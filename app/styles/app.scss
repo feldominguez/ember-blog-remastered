@@ -568,7 +568,8 @@
     
     .offset-card-background {
         //background-color: #fbfbfb;
-        background-color: #F0F0F0;
+        //background-color: #F0F0F0;
+        background: -webkit-radial-gradient(bottom left, ellipse cover, rgba(27, 131, 179, 0.97) 0%, rgba(88, 197, 31, 0.62) 100%);
         position: absolute;
         height: 65%;
         width: 100%;
@@ -592,7 +593,8 @@
             text-align: right;
             text-decoration: none;
             display: block;
-            color: #333333;
+            // color: #333333;
+            color: white;
             font-family: Roboto;
             font-weight: 500;
             font-size: 12pt;
@@ -601,15 +603,22 @@
             color: #3e3e3e;
             font-weight: 400;
             font-size: 17pt;
+            position: relative;
             &:before {
-                // content: '';
-                // border-left: 10px solid red;
+                content: '';
+                height: 30px;
+                width: 140px;
+                position: absolute;
+                z-index: -1;
+                bottom: -10px;
+                right: 40%;
             }
         }
     }
     
     .card__body {
         // border: 1px solid black;
+        // box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
         box-shadow: 0px 11px 20px 4px rgba(46, 61, 73, 0.15);
         background: white;
         padding: 2.25rem;
@@ -617,8 +626,9 @@
         transition: all .3s ease;
         margin-bottom: 20px;
         min-height: 300px;
-        // border-radius: .375rem;
+        border-radius: .375rem;
         &:hover {
+            // box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
             box-shadow: 0px 3px 8px 0px rgba(46, 61, 73, 0.2);
         }
         p {
@@ -643,43 +653,32 @@
         }
     }
     
-    .red {
-        $red: red !important;
+    @mixin card-color-theme($color) {
         h4 {
             &:before {
-                background: red !important;
+                background: $color;
             }
         }
+    }
+    
+    .red {
+        $color: red !important;
+        @include card-color-theme($color);
     }
     
     .yellow {
-        $yellow: #dac404 !important;
-        h4 {
-            &:before {
-                background: $yellow;
-            }
-        }
-        div>button {
-            color: $yellow
-        }
+        $color: #dac404 !important;
+        @include card-color-theme($color);
     }
     
     .green {
-        h4 {
-            $green: #5cad5c !important;
-            &:before {
-                background: $green;
-            }
-        }
+        $color: #5cad5c !important;
+        @include card-color-theme($color);
     }
     
     .blue {
-        $blue: #40b4f1 !important;
-        h4 {
-            &:before {
-                background: $blue;
-            }
-        }
+        $color: #40b4f1 !important;
+        @include card-color-theme($color);
     }
     
     //blank bottom
