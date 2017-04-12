@@ -14,18 +14,40 @@
         {{#each model as |card|}}
         <div class='card__area {{card.theme}} layout-column flex'>
             <h3 class='card__announce'>{{card.sectionTitle}}</h3>
-
-            <div class='card__body'>
-                <h4>{{card.contentTitle}}</h4>
-                <div class='card__content__container'>
-                    <p class='card__content up'>{{card.contentText}}</p>
-                    <img src='{{card.img}}'>
-                    {{!--<div class='card__content down'> </div>       --}}
+ {{#if card.params}}
+ {{#link-to card.state card.params}}
+ <div class='card__body'>
+                
+                   <div class='card__content up'>
+                        <img src='{{card.img}}'>
+                   </div>
+                    <div class='card__content down'>
+                        <h4>{{card.contentTitle}}</h4>
+                        <p>{{card.contentText}}</p>
+                    </div>
                 </div>
+            
+            {{/link-to}}
+ {{else}}
+ {{#link-to card.state}}
+ <div class='card__body'>
+                
+                   <div class='card__content up'>
+                        <img src='{{card.img}}'>
+                   </div>
+                    <div class='card__content down'>
+                        <h4>{{card.contentTitle}}</h4>
+                        <p>{{card.contentText}}</p>
+                    </div>
+               
             </div>
+            {{/link-to}}
+ {{/if}}
+            
+            
 
 
-            {{#link-to card.state tagName='button' class=card.theme}} {{card.link}} {{/link-to}}
+            {{#link-to card.state tagName='button'}} {{card.link}} {{/link-to}}
             {{!--<button class='card__follow'>{{card.link}}</button>--}}
         </div>
             {{/each}}
