@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
     model: function() {
         var introCardsContent = [{
-            sectionTitle: 'Latest Project',
+            sectionTitle: 'LATEST PROJECT',
             contentTitle: 'Simple Blog',
             contentText: 'An API based blog application with CRUD operations and JWT authentication based on Ember.',
             link: 'See All Projects',
@@ -13,7 +13,7 @@ export default Ember.Route.extend({
             state: 'login',
             params: false
         }, {
-            sectionTitle: 'Last Blog',
+            sectionTitle: 'LAST BLOG',
             contentTitle: 'Learn a Framework By Writting A Blog',
             contentText: 'Buidling a blog app to get the basics and insights of any framework',
             link: 'Go to Blog',
@@ -22,7 +22,7 @@ export default Ember.Route.extend({
             state: 'blog.post',
             params: 75
         }, {
-            sectionTitle: 'About Me',
+            sectionTitle: 'ABOUT ME',
             contentTitle: 'Hi I\'m Phil,',
             contentText: 'LA Based front end engineer',
             other: '',
