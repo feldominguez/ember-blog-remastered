@@ -26,7 +26,7 @@ export default Ember.Route.extend({
         }, {
             sectionTitle: 'ABOUT ME',
             contentTitle: 'Hi I\'m Phil,',
-            contentText: 'LA Based engineer focused on the UI and Front-End of Applications. Rookie basketball player and strong soccer competency. A film fanatic with a knack for science fiction.',
+            contentText: 'LA based engineer focused on the UI and Front-End of Applications. Rookie basketball player and strong soccer competency. A film fanatic with a knack for science fiction.',
             currentLink: '',
             other: '',
             link: 'Learn More',
@@ -36,7 +36,7 @@ export default Ember.Route.extend({
             params: false
         }];
 
-        return introCardsContent
+        return introCardsContent;
     }
 
 });
