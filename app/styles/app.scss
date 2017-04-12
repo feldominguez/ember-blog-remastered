@@ -562,14 +562,16 @@
         // background-position: 100px;
         position: relative;
         background-color: white;
-        margin-top: 30px;
-        padding-top: 20px;
+        // margin-top: 30px;
+        padding-bottom: 20px;
+        box-sizing: border-box
     }
     
     .offset-card-background {
         //background-color: #fbfbfb;
         //background-color: #F0F0F0;
-        background: -webkit-radial-gradient(bottom left, ellipse cover, rgba(27, 131, 179, 0.97) 0%, rgba(88, 197, 31, 0.62) 100%);
+        background-color: #eaeae9;
+        //  background: -webkit-radial-gradient(bottom left, ellipse cover, rgba(27, 131, 179, 0.97) 0%, rgba(88, 197, 31, 0.62) 100%);
         position: absolute;
         height: 65%;
         width: 100%;
@@ -586,15 +588,15 @@
     }
     
     .card__area {
-        padding: 30px;
+        padding: 10px 30px;
         button {
             background-color: inherit;
             border: none;
             text-align: right;
             text-decoration: none;
             display: block;
-            // color: #333333;
-            color: white;
+            color: #333333;
+            // color: white;
             font-family: Roboto;
             font-weight: 500;
             font-size: 12pt;
@@ -613,12 +615,18 @@
                 bottom: -10px;
                 right: 40%;
             }
+            &:after {
+                content: ".";
+                font-size: 27pt;
+                line-height: 10px;
+            }
         }
     }
     
     .card__body {
         // border: 1px solid black;
         // box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+        transition: all .3s ease;
         box-shadow: 0px 11px 20px 4px rgba(46, 61, 73, 0.15);
         background: white;
         padding: 2.25rem;
@@ -627,9 +635,14 @@
         margin-bottom: 20px;
         min-height: 300px;
         border-radius: .375rem;
+        position: relative;
+        overflow: hidden;
         &:hover {
             // box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
             box-shadow: 0px 3px 8px 0px rgba(46, 61, 73, 0.2);
+            img {
+                top: 58%;
+            }
         }
         p {
             margin: 0;
@@ -651,12 +664,26 @@
                 background: #02b3e4;
             }
         }
+        img {
+            width: 100%;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 60%;
+            margin: 0 auto;
+            transition: all .3s ease;
+        }
     }
     
     @mixin card-color-theme($color) {
         h4 {
             &:before {
                 background: $color;
+            }
+        }
+        h3 {
+            &:after {
+                color: $color;
             }
         }
     }
@@ -685,4 +712,27 @@
     .blank-bottom {
         height: 60px;
         background-color: white;
+    }
+    
+    .bg {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 300% 300%;
+        background-image: linear-gradient( -45deg, rgba(59, 173, 227, 1) 0%, rgba(87, 111, 230, 1) 25%, rgba(152, 68, 183, 1) 51%, rgba(255, 53, 127, 1) 100%);
+        animation: AnimateBG 20s ease infinite;
+    }
+    
+    @keyframes AnimateBG {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
     }

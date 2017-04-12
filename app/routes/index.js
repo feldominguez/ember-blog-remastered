@@ -9,19 +9,25 @@ export default Ember.Route.extend({
             link: 'See Portfolio',
             other: '',
             theme: 'yellow',
-            img: '/img/blog-screen.png'
+            img: '/images/blog-screen.png',
+            state: 'blog'
         }, {
             sectionTitle: 'Latest Blog',
             contentTitle: 'Learn a Framework By Writting A Blog',
             contentText: 'Buidling a blog app to get the basics and insights of any framework',
             link: 'Go to Blog',
-            theme: 'green'
+            theme: 'green',
+            img: 'http://i.imgur.com/FaP3aA1.png',
+            state: 'blog'
         }, {
             sectionTitle: 'About Me',
             contentTitle: 'Hi I\'m Phil,',
             contentText: 'LA Based front end engineer',
             other: '',
-            theme: 'blue'
+            link: 'Learn More',
+            theme: 'blue',
+            img: 'http://i.imgur.com/GKPMjkr.jpg',
+            state: 'blog'
         }];
 
         return introCardsContent
