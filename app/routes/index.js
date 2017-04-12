@@ -5,17 +5,19 @@ export default Ember.Route.extend({
         var introCardsContent = [{
             sectionTitle: 'LATEST PROJECT',
             contentTitle: 'Simple Blog',
-            contentText: 'An API based blog application with CRUD operations and JWT authentication based on Ember.',
+            contentText: 'API based blog application with CRUD operations and JWT authentication based on Ember.',
+            currentLink: 'See Project',
             link: 'See All Projects',
             other: '',
             theme: 'yellow',
             img: '/images/blog-screen.png',
-            state: 'login',
+            state: 'blog',
             params: false
         }, {
             sectionTitle: 'LAST BLOG',
             contentTitle: 'Learn a Framework By Writting A Blog',
-            contentText: 'Buidling a blog app to get the basics and insights of any framework',
+            contentText: 'In this last blog I talk about building a blog application to get the basics and insights of any framework',
+            currentLink: 'Read Post',
             link: 'Go to Blog',
             theme: 'green',
             img: 'http://i.imgur.com/FaP3aA1.png',
@@ -24,12 +26,13 @@ export default Ember.Route.extend({
         }, {
             sectionTitle: 'ABOUT ME',
             contentTitle: 'Hi I\'m Phil,',
-            contentText: 'LA Based front end engineer',
+            contentText: 'LA Based engineer focused on the UI and Front-End of Applications. Rookie basketball player and strong soccer competency. A film fanatic with a knack for science fiction.',
+            currentLink: '',
             other: '',
             link: 'Learn More',
-            theme: 'blue',
+            theme: 'blue hide-link-after',
             img: 'http://i.imgur.com/GKPMjkr.jpg',
-            state: 'blog',
+            state: 'index',
             params: false
         }];
 
