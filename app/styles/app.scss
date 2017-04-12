@@ -11,6 +11,10 @@
                 background-color: $bg-color;
             }
             
+            md-content {
+                overflow: hidden
+            }
+            
             .ember-view,
             .blog.post.container {
                 animation: loadingIntro .6s !important;
@@ -443,8 +447,9 @@
             
             //  New Index Section
             .index__wrapper {
-                padding: 100px;
-                padding-bottom: 60px;
+                padding: 130px 0 120px 0;
+                margin: 0 auto;
+                width: 100%;
             }
             
             .index-banner {
@@ -564,12 +569,13 @@
                 background-color: white;
                 // margin-top: 30px;
                 padding-bottom: 20px;
-                box-sizing: border-box
+                box-sizing: border-box;
             }
             
             .offset-card-background {
                 // background-color: rgba(245, 245, 245, 0.63);
-                background-color: rgb(66, 42, 189);
+                //background-color: rgb(66, 42, 189);
+                background-color: rgba(0, 0, 0, .05);
                 position: absolute;
                 height: 75%;
                 width: 100%;
@@ -582,18 +588,30 @@
                 width: 95%;
                 margin: 0 auto;
                 z-index: 1;
-                position: relative
+                position: relative;
+                /* flex: 1 0 200px; */
+                flex-direction: row;
+                /* float: right; */
+                flex-wrap: wrap;
             }
             
             .card__area {
                 padding: 10px 30px;
+                padding: 1.5vw;
+                max-width: 350px;
+                min-width: 255px;
+                float: left;
+                flex: 1 0 300px;
+                /* flex-direction: row; */
+                float: right;
+                flex-wrap: wrap;
                 button {
                     background-color: inherit;
                     border: none;
                     text-align: right;
                     text-decoration: none;
                     display: block;
-                    color: white;
+                    color: rgba(0, 0, 0, .6);
                     // color: white;
                     font-family: Roboto;
                     font-weight: 500;
@@ -606,9 +624,9 @@
                     }
                 }
                 h3 {
-                    color: #6b6b6b;
+                    color: rgba(0, 0, 0, 0.7);
                     font-weight: 700;
-                    font-size: 11pt;
+                    font-size: 10pt;
                     position: relative;
                     font-family: Poppins;
                     &:before {
@@ -629,16 +647,14 @@
             }
             
             .card__body {
-                // box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
-                // transition: all .3s ease;
-                box-shadow: 0px 11px 20px 4px rgba(0, 0, 0, 0.21);
-                // background: white;
-                // padding: 2.25rem;
-                // padding-top: 1.3rem;
+                box-shadow: 0px 7px 20px 4px rgba(45, 45, 45, 0.21);
                 transition: all .3s ease;
                 margin-bottom: 20px;
                 height: 400px;
                 align-items: center;
+                border-radius: 8px;
+                overflow: hidden;
+                min-width: 215px;
                 &:hover {
                     // box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
                     box-shadow: 0px 3px 8px 0px rgba(46, 61, 73, 0.2);
@@ -656,7 +672,7 @@
                     color: #292929;
                     position: relative;
                     padding-top: 8px;
-                    font-size: 16pt;
+                    font-size: 14pt;
                     font-weight: 600;
                     margin-top: 0;
                     display: -ms-flexbox;
@@ -759,6 +775,16 @@
             
             //blank bottom
             .blank-bottom {
-                height: 60px;
+                height: 370px;
                 background-color: white;
+                img {
+                    margin: 0 auto;
+                    display: block;
+                    height: 60px;
+                    width: auto;
+                    padding: 160px 0 140px 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
