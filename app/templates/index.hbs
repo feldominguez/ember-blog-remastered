@@ -1,4 +1,4 @@
-<div class='index-wrapper'>
+<div class='index__wrapper'>
 
 {{index-banner}}
 {{social-networks}}
@@ -6,4 +6,56 @@
 {{!--{{#each model as |section|}}
    <div>{{section.title}} {{section.text}} {{section.follow}} projects</div>
 {{/each}}--}}
+
 </div>
+<div class='index-card-wrapper'>
+<div class='offset-card-background'></div>
+    <div class='index-card-section layout-row layout-align-center-center'>
+        {{#each model as |card|}}
+        <div class='card__area {{card.theme}} layout-column flex'>
+            <h3 class='card__announce'>{{card.sectionTitle}}</h3>
+ {{#if card.params}}
+ {{#link-to card.state card.params}}
+ <div class='card__body'>
+                
+                   <div class='card__content up'>
+                        <img src='{{card.img}}'>
+                   </div>
+                    <div class='card__content down'>
+                        <h4>{{card.contentTitle}}</h4>
+                        <p>{{card.contentText}}</p>
+                    </div>
+                </div>
+            
+            {{/link-to}}
+ {{else}}
+ {{#link-to card.state}}
+ <div class='card__body'>
+                
+                   <div class='card__content up'>
+                        <img src='{{card.img}}'>
+                   </div>
+                    <div class='card__content down'>
+                        <h4>{{card.contentTitle}}</h4>
+                        <p>{{card.contentText}}</p>
+                    </div>
+               
+            </div>
+            {{/link-to}}
+ {{/if}}
+            
+            
+
+
+            {{#link-to card.state tagName='button'}} {{card.link}} {{/link-to}}
+            {{!--<button class='card__follow'>{{card.link}}</button>--}}
+        </div>
+            {{/each}}
+        </div> 
+
+    </div>
+
+    <div class='blank-bottom'>
+        <img src="/images/logo.png">
+    </div>
+
