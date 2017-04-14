@@ -1199,3 +1199,22 @@
                     }
                 }
             }
+            
+            .portfolio-banner__section {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                font-family: Poppins;
+                h3 {
+                    margin: 0;
+                    font-size: 55pt;
+                    line-height: 43px;
+                    color: rgb(49, 49, 49);
+                }
+                span {
+                    font-size: 12pt;
+                    padding-left: 4px;
+                    color: #ff6332
+                }
+            }
