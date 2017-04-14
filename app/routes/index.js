@@ -16,7 +16,7 @@ export default Ember.Route.extend({
         }, {
             sectionTitle: 'LAST BLOG',
             contentTitle: 'Learn a Framework By Writting A Blog',
-            contentText: 'In this last blog I talk about building a blog application to get the basics and insights of any framework',
+            contentText: 'In this last blog I talk about building a blog application to get the basics and insights of any framework.',
             currentLink: 'Read Post',
             link: 'Go to Blog',
             theme: 'green',
