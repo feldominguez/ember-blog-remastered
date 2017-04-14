@@ -30,10 +30,6 @@ Router.map(function() {
   this.route('portfolio', function() {
       this.route('project', { path: '/:project' });
   });
-
-  this.route('api', function() {
-    this.route('porfolio');
-  });
 });
 
 export default Router;
