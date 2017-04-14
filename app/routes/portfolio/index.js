@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model: function() {
-        var introCardsContent = [{
+        const introCardsContent = [{
             name: 'simple-blog',
             link: 'simple-blog',
             contentTitle: 'Simple Blog',

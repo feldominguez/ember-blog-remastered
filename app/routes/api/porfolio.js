@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model: function(params) {
-        var introCardsContent = [{
+        const introCardsContent = [{
             link: 'simple-blog',
             contentTitle: 'Simple Blog',
             shortText: 'API based blog application with CRUD operations and JWT authentication based on Ember.',
@@ -16,14 +16,6 @@ export default Ember.Route.extend({
             params: false
         }];
 
-        var project = introCardsContent.map(function(current) {
-
-            if (current.link == params) {
-                return current
-            }
-
-        });
-
-        console.log(project);
+        return introCardsContent;
     }
 });
