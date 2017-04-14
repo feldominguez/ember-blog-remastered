@@ -15,7 +15,7 @@
         <div class='card__area {{card.theme}} layout-column flex'>
             <h3 class='card__announce'>{{card.sectionTitle}}</h3>
  {{#if card.params}}
- {{#link-to card.state card.params}}
+ {{#link-to 'portfolio.project' card.name}}
  <div class='card__body'>
                 
                    <div class='card__content up'>
@@ -30,7 +30,7 @@
             
             {{/link-to}}
  {{else}}
- {{#link-to card.state}}
+ {{#link-to 'portfolio.project' card.name}}
  <div class='card__body'>
                 
                    <div class='card__content up'>
@@ -49,13 +49,11 @@
             
 
 
-            {{#link-to card.state tagName='button'}} {{card.link}} {{/link-to}}
+            {{!--{{#link-to card.state tagName='button'}} {{card.link}} {{/link-to}}--}}
             {{!--<button class='card__follow'>{{card.link}}</button>--}}
         </div>
             {{/each}}
         </div> 
 
     </div>
-
-    
-
+            

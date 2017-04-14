@@ -1,0 +1,29 @@
+import Ember from 'ember';
+
+export default Ember.Route.extend({
+    model: function(params) {
+        var introCardsContent = [{
+            link: 'simple-blog',
+            contentTitle: 'Simple Blog',
+            shortText: 'API based blog application with CRUD operations and JWT authentication based on Ember.',
+            detailText: '',
+            currentLink: 'See Project',
+            linsk: 'See All Projects',
+            other: '',
+            theme: 'yellow',
+            img: '/images/blog-screen.png',
+            state: 'simple-blog',
+            params: false
+        }];
+
+        var project = introCardsContent.map(function(current) {
+
+            if (current.link == params) {
+                return current
+            }
+
+        });
+
+        console.log(project);
+    }
+});
