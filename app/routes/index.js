@@ -26,12 +26,12 @@ export default Ember.Route.extend({
         }, {
             sectionTitle: 'ABOUT ME',
             contentTitle: 'Hi I\'m Phil,',
-            contentText: 'LA based engineer focused on the UI and Front-End of Applications. Rookie basketball player and strong soccer competency. A film fanatic with a knack for science fiction.',
+            contentText: 'San Diego based engineer focused on the UI and Front-End. Rookie basketball player and strong soccer competency. A film fanatic with a knack for science fiction.',
             currentLink: '',
             other: '',
             link: 'Learn More',
             theme: 'blue hide-link-after',
-            img: 'http://i.imgur.com/GKPMjkr.jpg',
+            img: 'http://i.imgur.com/JbdvQlK.jpg',
             state: 'index',
             params: false
         }];
