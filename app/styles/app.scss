@@ -1204,7 +1204,7 @@
                 height: 100%;
                 display: flex;
                 justify-content: center;
-                align-items: flex-start;
+                align-items: center;
                 font-family: Poppins;
                 h3 {
                     margin: 0;
@@ -1217,4 +1217,8 @@
                     padding-left: 4px;
                     color: #ff6332
                 }
+            }
+            
+            .ember-basic-dropdown-content {
+                z-index: 100000;
             }
