@@ -11,8 +11,8 @@ export default Ember.Route.extend({
             other: '',
             theme: 'yellow',
             img: '/images/blog-screen.png',
-            state: 'blog',
-            params: false
+            state: 'portfolio.project',
+            params: 'simple-blog'
         }, {
             sectionTitle: 'LAST BLOG',
             contentTitle: 'Learn a Framework By Writting A Blog',
