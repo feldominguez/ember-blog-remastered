@@ -1,0 +1,34 @@
+<div class='project__wrapper'>
+    <div class='project__top'>
+       <div class='project__top__content'>
+            <h1>{{{model.contentTitle}}}</h1>
+            <p>{{model.shortText}}</p>
+        
+
+         <ul>
+                <li><a href="{{model.github}}"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+                {{#if model.codepen}}
+                <li><a href="{{model.codepen}}"><i class="fa fa-codepen fa-2x" aria-hidden="true"></i></a></li>
+                {{/if}}
+            </ul></div>
+       
+    </div>
+
+    <div class='project__middle'>
+             <div class='project__img'>
+                  <a href='{{model.liveProject}}'><img src='{{model.img}}'></a>
+            </div>
+    </div>
+
+    <div class='project__bottom'>
+        <div class='project__bottom__content'>
+<h3>Technologies Used</h3>
+            <ul> 
+                {{#each model.projectTech as |tech|}}
+                    <li> {{tech}}</li>
+                {{/each}}
+            </ul>
+
+    </div></div>
+
+    </div>

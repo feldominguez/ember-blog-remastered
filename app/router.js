@@ -7,26 +7,29 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    this.route('create-new-blogPost', { path: '/new-post' });
+  this.route('create-new-blogPost', { path: '/new-post' });
 
 
-    this.route('blog', function() {
-        this.route('post', { path: "/post/:id" });
-        this.route('home', { path: "" });
-    });
-    this.route('login');
-    this.route('loading');
+  this.route('blog', function() {
+      this.route('post', { path: "/post/:id" });
+      this.route('home', { path: "" });
+  });
+  this.route('login');
+  this.route('loading');
 
-    this.route('index', { path: '/' }
-        // this.route('posts');
-    );
-    this.route('some', function() {
-        this.route('nested');
-    });
+  this.route('index', { path: '/' }
+      // this.route('posts');
+  );
+  this.route('some', function() {
+      this.route('nested');
+  });
 
-    this.route('edit', function() {
-        this.route('blog-post', { path: "/blog-post/:id" });
-    });
+  this.route('edit', function() {
+      this.route('blog-post', { path: "/blog-post/:id" });
+  });
+  this.route('portfolio', function() {
+      this.route('project', { path: '/:project' });
+  });
 });
 
 export default Router;

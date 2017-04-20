@@ -1,21 +1,23 @@
 <div class='index__wrapper'>
+<div class='index-banner'>
 
-{{index-banner}}
-{{social-networks}}
 
-{{!--{{#each model as |section|}}
-   <div>{{section.title}} {{section.text}} {{section.follow}} projects</div>
-{{/each}}--}}
+    <div class='portfolio-banner__section'>
+        
+        <h3>Projects.</h3>
+    </div>
+    </div>
 
 </div>
+
 <div class='index-card-wrapper'>
 <div class='offset-card-background'></div>
     <div class='index-card-section layout-row layout-align-center-center'>
         {{#each model as |card|}}
         <div class='card__area {{card.theme}} layout-column flex'>
-            <h3 class='card__announce'>{{card.sectionTitle}}</h3>
+            {{!--<h3 class='card__announce'>{{card.sectionTitle}}</h3>--}}
  {{#if card.params}}
- {{#link-to card.state card.params}}
+ {{#link-to 'portfolio.project' card.name}}
  <div class='card__body'>
                 
                    <div class='card__content up'>
@@ -23,14 +25,14 @@
                    </div>
                     <div class='card__content down'>
                         <h4>{{card.contentTitle}}</h4>
-                        <p>{{card.contentText}}</p>
+                        <p>{{card.shortText}}</p>
                         <span class='{{card.theme}}'>{{card.currentLink}}</span>
                     </div>
                 </div>
             
             {{/link-to}}
  {{else}}
- {{#link-to card.state}}
+ {{#link-to 'portfolio.project' card.name}}
  <div class='card__body'>
                 
                    <div class='card__content up'>
@@ -38,7 +40,7 @@
                    </div>
                     <div class='card__content down'>
                         <h4>{{card.contentTitle}}</h4>
-                        <p>{{card.contentText}}</p>
+                        <p>{{card.shortText}}</p>
                         <span class='{{card.theme}}'>{{card.currentLink}}</span>
                     </div>
                
@@ -49,13 +51,12 @@
             
 
 
-            {{#link-to card.state tagName='button'}} {{card.link}} {{/link-to}}
+            {{!--{{#link-to card.state tagName='button'}} {{card.link}} {{/link-to}}--}}
             {{!--<button class='card__follow'>{{card.link}}</button>--}}
         </div>
             {{/each}}
         </div> 
 
     </div>
-
-    
-
+            
+            {{social-networks}}
