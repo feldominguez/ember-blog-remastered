@@ -1222,3 +1222,60 @@
             .ember-basic-dropdown-content {
                 z-index: 100000;
             }
+
+
+
+.project__wrapper{
+    padding-top: 90px; 
+    width: 100%;
+    margin: 0 auto
+}
+
+.project__top{
+background-color: green;
+height: 400px;
+width: 50%;
+float: left;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.project__top__content{
+    h1{
+    line-height: 100%;
+    font-size: 34pt;
+    font-family: Poppins;
+    margin-bottom: 10px;
+}
+p{
+width: 200px;
+}
+ul{
+    margin: 0 auto;
+li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+}
+}
+
+.project__middle{
+background-color: yellow;
+height: 800px;
+width: 50%;
+display: block;
+float: right;
+img{
+    display: block;
+    margin: 0 auto;
+}
+}
+
+.project__bottom{
+background-color: purple;
+height: 400px;
+width: 50%;
+float: left
+}

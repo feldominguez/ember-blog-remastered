@@ -1,7 +1,35 @@
-wedwedwedwed
+<div class='project__wrapper'>
+    <div class='project__top'>
+       <div class='project__top__content'>
+            <h1>{{{model.contentTitle}}}</h1>
+            <p>{{model.shortText}}</p>
+        
 
+         <ul>
+                <li><a href="{{model.liveProject}}"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href='#'><i class="fa fa-codepen fa-2x" aria-hidden="true"></i></a></li>
 
-<div style='padding-top: 90px;width: 100%'>
-    {{model.name}}
-</div>
-{{outlet}}
+            </ul></div>
+       
+    </div>
+
+    <div class='project__middle'>
+         <div class='project__content right'>
+             <div class='project__img'>
+                  <img src='{{model.img}}'>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class='project__bottom'>
+<h3>Specifics</h3>
+            <ul> 
+                {{#each model.projectTech as |tech|}}
+                    <li>+{{tech}}</li>
+                {{/each}}
+            </ul>
+
+    </div>
+
+    </div>
