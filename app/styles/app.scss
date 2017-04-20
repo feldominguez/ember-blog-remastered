@@ -1222,60 +1222,69 @@
             .ember-basic-dropdown-content {
                 z-index: 100000;
             }
-
-
-
-.project__wrapper{
-    padding-top: 90px; 
-    width: 100%;
-    margin: 0 auto
-}
-
-.project__top{
-background-color: green;
-height: 400px;
-width: 50%;
-float: left;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.project__top__content{
-    h1{
-    line-height: 100%;
-    font-size: 34pt;
-    font-family: Poppins;
-    margin-bottom: 10px;
-}
-p{
-width: 200px;
-}
-ul{
-    margin: 0 auto;
-li{
-    list-style-type: none;
-    display: inline-block;
-    margin: 0 10px;
-}
-}
-}
-
-.project__middle{
-background-color: yellow;
-height: 800px;
-width: 50%;
-display: block;
-float: right;
-img{
-    display: block;
-    margin: 0 auto;
-}
-}
-
-.project__bottom{
-background-color: purple;
-height: 400px;
-width: 50%;
-float: left
-}
+            
+            .project__wrapper {
+                padding-top: 90px;
+                width: 100%;
+                margin: 0 auto;
+                max-width: 1000px;
+            }
+            
+            .project__top {
+                // background-color: green;
+                height: 400px;
+                width: 50%;
+                float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .project__top__content {
+                width: 55%;
+                color: #313131;
+                h1 {
+                    line-height: 100%;
+                    font-size: 34pt;
+                    font-family: Poppins;
+                    margin-bottom: 10px;
+                }
+                p {
+                    width: 90%;
+                }
+                ul {
+                    padding-left: 0;
+                    a {
+                        color: #313131 + 30;
+                    }
+                    li {
+                        list-style-type: none;
+                        display: inline-block;
+                        margin: 0 10px;
+                    }
+                }
+            }
+            
+            .project__middle {
+                //background-color: yellow;
+                height: 800px;
+                width: 50%;
+                display: block;
+                float: right;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                img {
+                    display: block;
+                    // margin: 0 auto;
+                    width: 65%;
+                    max-width: 400px;
+                }
+            }
+            
+            .project__bottom {
+                // background-color: purple;
+                height: 400px;
+                width: 50%;
+                float: left
+            }

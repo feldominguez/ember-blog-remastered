@@ -4,20 +4,20 @@ export default Ember.Route.extend({
     model: function(projectParam) {
         const projectCards = [{
             name: 'simple-blog',
-            contentTitle: 'Simple Blog',
+            contentTitle: 'Simple<br>Blog',
             shortText: 'API based blog application with CRUD operations and JWT authentication based on Ember.',
             liveProject: 'https://google.com',
             currentLink: 'See Project',
-            img: 'https://i.imgur.com/zVbhBFs.png',
+            img: 'https://i.imgur.com/a84juZn.png',
             params: false,
-            projectTech: ['CSS','JS','jQuery','HTML','EMBER']
+            projectTech: ['CSS', 'JS', 'jQuery', 'HTML', 'EMBER']
         }, {
             name: 'weather-widget',
             contentTitle: 'Weather<br>Widget',
             shortText: 'Responsive Weather Widget created with the Aeris API and Meterial-y designed.',
             liveProject: 'https://google.com',
             currentLink: 'See Project',
-            img: 'https://i.imgur.com/oOC2Fds.png',
+            img: 'http://i.imgur.com/UtZxCMG.png',
             params: false
         }, {
             name: 'reddit-search',
@@ -25,7 +25,7 @@ export default Ember.Route.extend({
             shortText: 'Responsive sub-reddit search created with Handlebars.js, Reddit API, and Bootstrap.',
             liveProject: 'https://google.com',
             currentLink: 'See Project',
-            img: 'https://i.imgur.com/WmFoZJX.png',
+            img: 'http://i.imgur.com/VjR28iU.png',
             params: false
         }, {
             name: 'twitch-staus-check',
@@ -33,7 +33,7 @@ export default Ember.Route.extend({
             shortText: 'Responsive Twitch TV App built with the Twitch API.',
             liveProject: 'https://google.com',
             currentLink: 'See Project',
-            img: 'https://i.imgur.com/bjFOmVj.png',
+            img: 'http://i.imgur.com/V86LCEd.png',
             params: false
         }, ];
 
