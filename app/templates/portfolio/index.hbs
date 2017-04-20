@@ -15,7 +15,7 @@
     <div class='index-card-section layout-row layout-align-center-center'>
         {{#each model as |card|}}
         <div class='card__area {{card.theme}} layout-column flex'>
-            <h3 class='card__announce'>{{card.sectionTitle}}</h3>
+            {{!--<h3 class='card__announce'>{{card.sectionTitle}}</h3>--}}
  {{#if card.params}}
  {{#link-to 'portfolio.project' card.name}}
  <div class='card__body'>

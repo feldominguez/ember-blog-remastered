@@ -21,9 +21,9 @@
     {{/menu.trigger}}
     {{#menu.content width=4 as |content|}}
       {{!--{{#each items as |item|}}--}}
-        {{#content.menu-item onClick="openSomething"}}
+        {{#content.menu-item onClick=(action "transition" "portfolio")}}
           {{paper-icon "face"}}
-          <span>About</span>
+          <span>Portfolio</span>
           {{!--<span>{{item.title}}</span>--}}
         {{/content.menu-item}}
       {{!--{{/each}}--}}

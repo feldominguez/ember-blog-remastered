@@ -16,7 +16,7 @@ export default Ember.Route.extend({
             shortText: 'Responsive Weather Widget created with the Aeris API and Meterial-y designed.',
             detailText: '',
             currentLink: 'See Project',
-            img: '/images/blog-screen.png',
+            img: 'https://i.imgur.com/8bBcIgF.png',
             params: false
         }, {
             name: 'reddit-search',
@@ -24,7 +24,7 @@ export default Ember.Route.extend({
             shortText: 'Responsive sub-reddit search created with Handlebars.js, Reddit API, and Bootstrap.',
             detailText: '',
             currentLink: 'See Project',
-            img: '/images/blog-screen.png',
+            img: 'https://i.imgur.com/OyfgLlM.png',
             params: false
         }, {
             name: 'twitch-staus-check',
@@ -32,7 +32,7 @@ export default Ember.Route.extend({
             shortText: 'Responsive Twitch TV App built with the Twitch API.',
             detailText: '',
             currentLink: 'See Project',
-            img: '/images/blog-screen.png',
+            img: 'https://i.imgur.com/KSSpJ1N.png',
             params: false
         }, ];
 

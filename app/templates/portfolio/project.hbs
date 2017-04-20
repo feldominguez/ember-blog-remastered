@@ -6,30 +6,29 @@
         
 
          <ul>
-                <li><a href="{{model.liveProject}}"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
-                <li><a href='#'><i class="fa fa-codepen fa-2x" aria-hidden="true"></i></a></li>
-
+                <li><a href="{{model.github}}"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+                {{#if model.codepen}}
+                <li><a href="{{model.codepen}}"><i class="fa fa-codepen fa-2x" aria-hidden="true"></i></a></li>
+                {{/if}}
             </ul></div>
        
     </div>
 
     <div class='project__middle'>
-         <div class='project__content right'>
              <div class='project__img'>
-                  <img src='{{model.img}}'>
+                  <a href='{{model.liveProject}}'><img src='{{model.img}}'></a>
             </div>
-           
-        </div>
     </div>
 
     <div class='project__bottom'>
-<h3>Specifics</h3>
+        <div class='project__bottom__content'>
+<h3>Technologies Used</h3>
             <ul> 
                 {{#each model.projectTech as |tech|}}
-                    <li>+{{tech}}</li>
+                    <li> {{tech}}</li>
                 {{/each}}
             </ul>
 
-    </div>
+    </div></div>
 
     </div>
