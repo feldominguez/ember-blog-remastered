@@ -20,9 +20,6 @@ Router.map(function() {
   this.route('index', { path: '/' }
       // this.route('posts');
   );
-  this.route('some', function() {
-      this.route('nested');
-  });
 
   this.route('edit', function() {
       this.route('blog-post', { path: "/blog-post/:id" });
