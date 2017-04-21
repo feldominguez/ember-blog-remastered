@@ -16,7 +16,8 @@
             }
             
             .ember-view,
-            .blog.post.container {
+            .blog.post.container,
+            .project__wrapper {
                 animation: loadingIntro .6s !important;
             }
             
