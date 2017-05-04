@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
                 title: this.get('title'),
                 text: this.get('content'),
                 imgUrl: this.get('imgUrl')
-            })
+            });
 
             newPost.save().then(() => {
                 this.transitionToRoute('index');

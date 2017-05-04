@@ -22,13 +22,13 @@ export default Ember.Controller.extend({
             promise.then((res) => {
 
                 if (!res.token) {
-                    alert('not really!')
+                    alert('not really!');
 
                 } else {
                     localStorage.setItem('token', res.token);
                     this.transitionToRoute('index');
                     window.location.reload(true);
-                    
+
                     //console.log(localStorage.token)
                 }
 

@@ -13,7 +13,7 @@ export function truncateText(params, hash) {
     }
 
 
-    return outputText
+    return outputText;
 }
 
 export default Ember.Helper.helper(truncateText);

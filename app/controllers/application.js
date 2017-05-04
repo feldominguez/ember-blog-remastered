@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-    // session: Ember.inject.service()
-    spinner: Ember.inject.service('spinner'),
     checkingAuths: function() {
         return localStorage.token ? true : false;
     }.property(),
@@ -18,7 +16,7 @@ export default Ember.Controller.extend({
             this.transitionToRoute(args);
         },
         hreftransition: function(args) {
-            window.open(args)
+            window.open(args);
         }
     }
 });

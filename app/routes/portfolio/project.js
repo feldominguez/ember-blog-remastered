@@ -50,7 +50,7 @@ export default Ember.Route.extend({
 
 
         let project = projectCards.reduce((targetProject, currentProject) => {
-            if (currentProject.name == projectParam.project) {
+            if (currentProject.name === projectParam.project) {
                 targetProject = currentProject;
             }
             return targetProject;

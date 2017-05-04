@@ -13,7 +13,7 @@ export function formatDate(params, hash) {
     }
 
 
-    return outputText
+    return outputText;
 }
 
 export default Ember.Helper.helper(formatDate);

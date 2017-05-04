@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
     actions: {
         delete: function(post) {
 
-            post.destroyRecord()
+            post.destroyRecord();
 
         }
     }
